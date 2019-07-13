@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flip A Coin</title>
+</head>
+
+<body>
+  <h1>Flip a Coin!</h1>
+  <button type="button" name="CoinFlip" onclick="coinFlip()">Flip it!</button>
+  <script>
+    //array for number of heads & tails
+    var coinArray = [];
+    //coin flip function
+    function coinFlip() {
+      //sets value for coin toss
+      var coinValue = Math.random();
+      //adds either heads or tails based on coinValue & adds to coinArray
+      if (coinValue < 0.5) {
+        document.write("heads!");
+        coinArray.push(1)
+      } else {
+        document.write("tails!");
+        coinArray.push(1)
+      }
+      document.write('<button type="onClick" onClick="location.reload()">Reload</button>')
+    }
+  </script>
+</body>
+
+</html>
