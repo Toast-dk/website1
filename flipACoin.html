@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Flip A Coin</title>
+<link rel="stylesheet" type="text/css" href="stylesheet/styleCoin.css">
 </head>
 
 <body>
@@ -17,10 +18,10 @@
       var coinValue = Math.random();
       //adds either heads or tails based on coinValue & adds to coinArray
       if (coinValue < 0.5) {
-        document.write("heads!");
+        document.write('<img src="images/heads.jpg" class="coin" alt="heads">');
         coinArray.push(1)
       } else {
-        document.write("tails!");
+        document.write('<img src="images/tails.jpg" class="coin" alt="tails">');
         coinArray.push(1)
       }
       document.write('<button type="onClick" onClick="location.reload()">Reload</button>')
