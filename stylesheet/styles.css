@@ -1,10 +1,12 @@
 body {
-  background-color: #6BD6FF;
+  background-color: #7EC9FF;
   font-family: 'Roboto Slab', serif;
 }
-.mineImage1 {
-  height: 600px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.projects {
+  border-color: #2D3771;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: rgb(54,193,255, 0.75);
+
 }

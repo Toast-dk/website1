@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Flip A Coin</title>
-<link rel="stylesheet" type="text/css" href="stylesheet/styleCoin.css">
+<link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,13 +19,22 @@
       var coinValue = Math.random();
       //adds either heads or tails based on coinValue & adds to coinArray
       if (coinValue < 0.5) {
+        document.write('<link rel="stylesheet" type="text/css" href="stylesheet/styles.css"><div class="border">You Got Heads!')
         document.write('<img src="images/heads.jpg" class="coin" alt="heads">');
         coinArray.push(1)
       } else {
+        document.write('<div class="border">You Got Tails!')
         document.write('<img src="images/tails.jpg" class="coin" alt="tails">');
-        coinArray.push(1)
+        coinArray.push(0)
       }
-      document.write('<button type="onClick" onClick="location.reload()">Reload</button>')
+      //adds button for user to flip again
+      document.write('<button type="onClick" onClick="clearCoinFlip()">Flip Again</button></div>')
+    }
+    function clearCoinFlip() {
+      //clears body
+      document.body.innerHTML = '';
+      //flips coin again
+      coinFlip()
     }
   </script>
 </body>
