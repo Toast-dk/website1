@@ -2,7 +2,7 @@ body {
   background-color: #7EC9FF;
   font-family: 'Roboto Slab', serif;
 }
-.projects {
+#border {
   border-color: #2D3771;
   border-width: 5px;
   border-style: solid;

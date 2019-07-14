@@ -17,18 +17,22 @@
     function coinFlip() {
       //sets value for coin toss
       var coinValue = Math.random();
+      //links to stylesheet
+      document.write('<link rel="stylesheet" type="text/css" href="stylesheet/styles.css"><div id="border">')
       //adds either heads or tails based on coinValue & adds to coinArray
       if (coinValue < 0.5) {
-        document.write('<link rel="stylesheet" type="text/css" href="stylesheet/styles.css"><div class="border">You Got Heads!')
+        document.write('You Got Heads!')
         document.write('<img src="images/heads.jpg" class="coin" alt="heads">');
         coinArray.push(1)
       } else {
-        document.write('<div class="border">You Got Tails!')
+        document.write('You Got Tails!')
         document.write('<img src="images/tails.jpg" class="coin" alt="tails">');
         coinArray.push(0)
       }
       //adds button for user to flip again
       document.write('<button type="onClick" onClick="clearCoinFlip()">Flip Again</button></div>')
+      //prints array
+      document.write(coinArray)
     }
     function clearCoinFlip() {
       //clears body
