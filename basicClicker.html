@@ -10,17 +10,34 @@
 <body>
   <a href="index.html" class="blue outline">Back To Home</a>
   <div id="border1">
-    <h1 class="title">Click the Toast!</h1>
-  	<a onclick="clickerUpdate()"><img src="images/toast.jpg" class="clickerImage"></a>
+    <h1 class="title center">Click the Toast!</h1>
+  	<a onclick="clickerUpdate()" id="clickA"><img src="images/toast.jpg" class="clickerImage"></a>
     <p id="clicks">Click the Toast to get Money!</p>
   </div>
-  <script>
+  <div id="border1">
+    <h1 class="title center">Upgrades!</h1>
+      <button type="button" name="xTwoUpgrade" onclick="clickerUpdate2Launch()" class="button">x2 Click Power (50 eggs)</button>
+  </div>
+<script>
     var numOfClicks = 0;
     function clickerUpdate() {
       numOfClicks += 1;
-      document.getElementById("clicks").innerHTML = "$" + numOfClicks;
+      document.getElementById("clicks").innerHTML = numOfClicks + " eggs";
     }
-  </script>
+    function clickerUpdate2() {
+      numOfClicks += 2;
+      document.getElementById("clicks").innerHTML = numOfClicks + " eggs";
+    }
+    function clickerUpdate2Launch() {
+      if (numOfClicks >= 50) {
+        document.getElementById( "clickA" ).setAttribute( "onclick", "javascript: clickerUpdate2();" );
+        numOfClicks -= 50;
+        document.getElementById("clicks").innerHTML = numOfClicks + " eggs";
+      } else {
+        alert("Not Enough Money")
+      }
+    }
+</script>
 </body>
 
 </html>
