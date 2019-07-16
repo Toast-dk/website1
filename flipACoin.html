@@ -14,10 +14,13 @@
   <div id='border1'>
     <h2 id='result'></h2>
     <img src='images/original.jpg' alt='base' id='coinImage'>
+    <h2 id='flipAmount'></h2>
   </div>
   <script>
     //array for number of heads & tails
     var coinArray = [];
+    //number of flips done
+    var numOfFlips = 0;
     //coin flip function
     function coinFlip() {
       //sets value for coin toss
@@ -32,6 +35,9 @@
         document.getElementById("coinImage").src = "images/tails.jpg";
         coinArray.push(0)
       }
+    console.log(coinArray)
+    numOfFlips += 1;
+    document.getElementById('flipAmount').innerHTML = "You have flipped the coin " + numOfFlips + " times";
     }
   </script>
 </body>

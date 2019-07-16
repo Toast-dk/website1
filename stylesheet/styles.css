@@ -24,6 +24,9 @@ body {
   flex-grow: 1;
   text-align: center;
 }
+.topBarElements:active {
+  background-color: #e3e3e4;
+}
 .noMargin {
   margin: 0px;
 }
@@ -32,6 +35,23 @@ body {
 }
 .title {
   margin: 20px;
+}
+.outline {
+  color: white;
+   text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+}
+.outline:active {
+  background-color: #e3e3e4;
+}
+.list {
+  font-family: 'Roboto Slab', serif;
+}
+.listAttributes {
+  font-size: 15px;
 }
 /*site-specific styles*/
 
@@ -52,10 +72,17 @@ body {
   margin-right: auto;
   width: 50%;
 }
+.coinButton:active {
+  background-color: #e3e3e4;
+  border-color: #162670;
+}
 .coinTitle {
   text-align: center;
 }
 #result {
+  text-align: center;
+}
+#flipAmount {
   text-align: center;
 }
 #coinImage {
@@ -66,20 +93,6 @@ body {
   height: 300px;
   width: 300px;
   margin-bottom: 10px;
-}
-.outline {
-  color: white;
-   text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
-}
-.list {
-    font-family: 'Roboto Slab', serif;
-}
-.listAttributes {
-  font-size: 15px;
 }
 /*clicker styles*/
 
