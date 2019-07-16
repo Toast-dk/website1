@@ -10,17 +10,40 @@
 <body>
   <a href="index.html" class="blue outline">Back To Home</a>
   <h1 class="coinTitle">Flip a Coin!</h1>
-  <button type="button" name="CoinFlip" onclick="coinFlip()" class="coinButton">Flip it!</button>
+  <button type="button" name="CoinFlip" onclick="coinFlip()" class="button">Flip it!</button>
   <div id='border1'>
     <h2 id='result'></h2>
     <img src='images/original.jpg' alt='base' id='coinImage'>
     <h2 id='flipAmount'></h2>
+    <h2 id='perc'></h2>
   </div>
   <script>
     //array for number of heads & tails
     var coinArray = [];
     //number of flips done
     var numOfFlips = 0;
+    //number of heads
+    var heads = 0;
+    //number of tails
+    var tails = 0;
+    //percentage of heads
+    var headsPerc = 0.0;
+    //percentage of tails
+    var tailsPerc = 0.0;
+    function round(value, decimals) {
+      return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+    }
+    //percentage generator function
+    function percentage(x, y, a, b, m, n) {
+      if (x > y) {
+        a = y/x;
+        a = round(a, 2);
+      } else {
+        b = x/y;
+        b = round(b, 2);
+      }
+      document.getElementById('perc').innerHTML = a + m + b + n;
+    }
     //coin flip function
     function coinFlip() {
       //sets value for coin toss
@@ -30,14 +53,17 @@
         document.getElementById("result").innerHTML = "You got heads!";
         document.getElementById("coinImage").src = "images/heads.jpg";
         coinArray.push(1)
+        heads += 1;
       } else {
         document.getElementById("result").innerHTML = "You got tails!";
         document.getElementById("coinImage").src = "images/tails.jpg";
         coinArray.push(0)
+        tails += 1;
       }
       console.log(coinArray)
       numOfFlips += 1;
       document.getElementById('flipAmount').innerHTML = "You have flipped the coin " + numOfFlips + " times";
+      percentage(heads, tails, headsPerc, tailsPerc, " heads ", " tails ");
     }
   </script>
 </body>

@@ -97,6 +97,9 @@ body {
   width: 300px;
   margin-bottom: 10px;
 }
+#perc {
+  text-align: center;
+}
 /*clicker styles*/
 
 .clickerImage {
