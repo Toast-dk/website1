@@ -3,10 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Clicker</title>
+<link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+  <a href="index.html" class="blue outline">Back To Home</a>
+  <div id="border1">
+    <h1 class="title">Click the Toast!</h1>
+  	<a onclick="clickerUpdate()"><img src="images/toast.jpg" class="clickerImage"></a>
+    <p id="clicks">Click the Toast to get Money!</p>
+  </div>
+  <script>
+    var numOfClicks = 0;
+    function clickerUpdate() {
+      numOfClicks += 1;
+      document.getElementById("clicks").innerHTML = "$" + numOfClicks;
+    }
+  </script>
 </body>
 
 </html>
