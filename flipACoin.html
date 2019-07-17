@@ -17,7 +17,58 @@
     <h2 id='flipAmount'></h2>
     <h2 id='perc'></h2>
   </div>
-  <script src="js/coinFlip.js" type="text/javascript"></script>
+  <script>
+    //number of flips done
+    var numOfFlips = 0;
+    //number of heads
+    var heads = 0;
+    //number of tails
+    var tails = 0;
+    //percentage of heads
+    var headsPerc = 0.0;
+    //percentage of tails
+    var tailsPerc = 0.0;
+    //rounded percentage
+    var roundedPerc = "";
+    //rounding number function
+    function round(value, decimals) {
+      roundedPerc = Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+      roundedPerc = roundedPerc.toString();
+      roundedPerc = roundedPerc.slice(2, 4);
+      return roundedPerc;
+    }
+    //percentage generator function
+    function percentage(x, y, a, b, m, n) {
+      if (x > y) {
+        a = y/x;
+        b = 1 - a;
+      } else {
+        b = x/y;
+        a = 1 - b;
+      }
+      a = round(a, 2);
+      b = round(b, 2);
+      document.getElementById('perc').innerHTML = a + "%" + m + "<br>" + b + "%" + n;
+    }
+    //coin flip function
+    function coinFlip() {
+      //sets value for coin toss
+      var coinValue = Math.random();
+      //adds either heads or tails based on coinValue & adds to coinArray
+      if (coinValue < 0.5) {
+        document.getElementById("result").innerHTML = "You got heads!";
+        document.getElementById("coinImage").src = "images/heads.jpg";
+        heads += 1;
+      } else {
+        document.getElementById("result").innerHTML = "You got tails!";
+        document.getElementById("coinImage").src = "images/tails.jpg";
+        tails += 1;
+      }
+      numOfFlips += 1;
+      document.getElementById('flipAmount').innerHTML = "You have flipped the coin " + numOfFlips + " times";
+      percentage(heads, tails, headsPerc, tailsPerc, " heads ", " tails ");
+    }
+  </script>
 </body>
 
 </html>
