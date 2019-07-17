@@ -33,27 +33,22 @@
     //rounding number function
     function round(value, decimals) {
       roundedPerc = Number(Math.round(value+'e'+decimals)+'e-'+decimals);
-      //roundedPerc = roundedPerc.toString();
-      //roundedPerc = roundedPerc.slice(2, 4);
+      roundedPerc = roundedPerc.toString();
+      roundedPerc = roundedPerc.slice(2, 4);
       return roundedPerc;
     }
     //percentage generator function
     function percentage(x, y, a, b, m, n) {
-      a = x / (x+y);
-      b = 1 - a;
-      /*if (x > y) {
+      if (x > y) {
         a = y/x;
         b = 1 - a;
       } else {
         b = x/y;
         a = 1 - b;
-      }*/
-      //a = round(a, 2);
-      //b = round(b, 2);
-      //document.getElementById('perc').innerHTML = a + "%" + m + "<br>" + b + "%" + n;
-      a = Math.round(a*10000)/100
-      b = Math.round(b*10000)/100
-      document.getElementById('perc').innerHTML = a + "% with " +x + m  + "<br>" + b + "%" + n ;
+      }
+      a = round(a, 2);
+      b = round(b, 2);
+      document.getElementById('perc').innerHTML = a + "%" + m + "<br>" + b + "%" + n;
     }
     //coin flip function
     function coinFlip() {
