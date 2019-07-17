@@ -18,26 +18,7 @@
     <h1 class="title center">Upgrades!</h1>
       <button type="button" name="xTwoUpgrade" onclick="clickerUpdate2Launch()" class="button">x2 Click Power (50 eggs)</button>
   </div>
-<script>
-    var numOfClicks = 0;
-    function clickerUpdate() {
-      numOfClicks += 1;
-      document.getElementById("clicks").innerHTML = numOfClicks + " eggs";
-    }
-    function clickerUpdate2() {
-      numOfClicks += 2;
-      document.getElementById("clicks").innerHTML = numOfClicks + " eggs";
-    }
-    function clickerUpdate2Launch() {
-      if (numOfClicks >= 50) {
-        document.getElementById( "clickA" ).setAttribute( "onclick", "javascript: clickerUpdate2();" );
-        numOfClicks -= 50;
-        document.getElementById("clicks").innerHTML = numOfClicks + " eggs";
-      } else {
-        alert("Not Enough Money")
-      }
-    }
-</script>
+<script src="js/clicker.js" type="text/javascript"></script>
 </body>
 
 </html>
