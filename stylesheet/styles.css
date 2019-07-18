@@ -114,6 +114,9 @@ body {
   text-align: center;
   font-size: 20px;
 }
+#upgradePrice {
+  text-align: center;
+}
 /*repetitive styles*/
 
 .white {
