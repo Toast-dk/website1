@@ -18,7 +18,7 @@ function clickerPowerLaunch() {
     numOfClicks -= upPrice;
     upPrice += 10;
     document.getElementById("clicks").innerHTML = numOfClicks + " eggs";
-    document.getElementById('upgradePrice').innerHTML = "+1 Click Power (" + upPrice + " eggs)"
+    document.getElementById('upgradePrice1').innerHTML = "+1 Click Power (" + upPrice + " eggs)"
   } else {
     alert("Not Enough Money")
   }

@@ -77,6 +77,28 @@ body {
 }
 /*site-specific styles*/
 
+/*home page*/
+.startPanel {
+  background-color: #00008b;
+  color: white;
+  margin: 0px;
+  text-align: center;
+  padding: 200px;
+  font-size: 50px;
+  outline-style: solid;
+  outline-color: white;
+  outline-width: 10px;
+}
+.myWebsite {
+  display: inline-block;
+  margin: 0px;
+}
+.typing {
+  display: inline-block;
+  margin: 0px;
+  animation: typing 1.25s steps(1) infinite;
+}
+
 /*coin Flip*/
 
 .coinTitle {
@@ -116,6 +138,16 @@ body {
 }
 #upgradePrice {
   text-align: center;
+}
+/*animaions*/
+
+@keyframes typing{
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 /*repetitive styles*/
 

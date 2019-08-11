@@ -1,0 +1,63 @@
+body {
+  background-color: #FFB7B2;;
+  animation: backgroundAnimation 7s steps(1) infinite;
+}
+.birthdayTitle {
+  text-align: center;
+  margin: 275px;
+  padding: 100px;
+  font-size: 50px;
+  font-family: cursive;
+  color: red;
+  animation: birthdayAnimation 7s steps(1) infinite;
+  border-style: solid;
+  border-width: 5px;
+  border-color: red
+}
+@keyframes birthdayAnimation {
+  0% {
+    color: red;
+    font-family: cursive;
+    transform: rotate(20deg);
+    border-style: solid;
+    border-color: red;
+  }
+  25% {
+    color: orange;
+    font-family: fantasy;
+    transform: rotate(-30deg);
+    border-style: double;
+    border-color: orange;
+  }
+  50% {
+    color: green;
+    font-family: monospace;
+    transform: rotate(5deg);
+    border-style: groove;
+    border-color: green;
+  }
+  75% {
+    color: blue;
+    font-family: sans-serif;
+    transform: rotate(40deg);
+    border-style: dashed;
+    border-color: blue;
+  }
+}
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #FFB7B2;
+  }
+  25% {
+    background-color: #FFDAC1;
+  }
+  50% {
+    background-color: #E2F0CB;
+  }
+  75% {
+    background-color: #B5EAD7;
+  }
+  100% {
+    background-color: #C7CEEA;
+  }
+}
