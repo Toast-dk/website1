@@ -2,21 +2,6 @@ body {
   background-color: #FFB7B2;;
   animation: backgroundAnimation 7s steps(1) infinite;
 }
-#topBar {
-  display: flex;
-  background-color: white;
-}
-.topBarElements {
-  border-style: solid;
-  border-width: 5px;
-  border-color: black;
-  padding: 5px;
-  flex-grow: 1;
-  text-align: center;
-}
-.topBarElements:active {
-  background-color: #e3e3e4;
-}
 .birthdayTitle {
   text-align: center;
   margin: 275px;
