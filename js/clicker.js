@@ -1,4 +1,12 @@
 //javascript file
+//enemies' health
+//rand. generating enemy's health
+var enemyHealth = 0.0;
+var formerEnemyHealth = 0.0;
+function randHealth() {
+  enemyHealth = Math.round((Math.random() + 0.1) * 100);
+  formerEnemyHealth = enemyHealth;
+}
 //cash
 var numOfClicks = 0;
 //clicking Power
@@ -9,8 +17,15 @@ var pwrCost = 50;
 var upPrice = 50;
 
 function clickerUpdate() {
-  numOfClicks += clickPower;
-  document.getElementById("clicks").innerHTML = numOfClicks + " eggs";
+  if (enemyHealth <= 0.0) {
+    console.log("healh = 0");
+    numOfClicks += formerEnemyHealth;
+    randHealth()
+    document.getElementById("enemy").innerHTML = enemyHealth;
+    document.getElementById("clicks").innerHTML = numOfClicks + " eggs";
+  }
+  enemyHealth -= clickPower;
+  document.getElementById("enemy").innerHTML = enemyHealth;
 }
 function clickerPowerLaunch() {
   if (numOfClicks >= upPrice) {
