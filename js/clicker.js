@@ -18,7 +18,6 @@ var upPrice = 50;
 
 function clickerUpdate() {
   if (enemyHealth <= 0.0) {
-    console.log("healh = 0");
     numOfClicks += formerEnemyHealth;
     randHealth()
     document.getElementById("enemy").innerHTML = enemyHealth;

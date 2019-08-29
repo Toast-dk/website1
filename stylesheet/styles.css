@@ -98,7 +98,23 @@ body {
   margin: 0px;
   animation: typing 1.25s steps(1) infinite;
 }
-
+.sectionPanel {
+  margin: 25px 0px;
+  padding: 10px;
+  background-color: #00008b;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  outline-style: solid;
+  outline-color: white;
+  outline-width: 5px;
+}
+.largeUpdate {
+  font-size: 20px;
+}
+.smallUpdate {
+  padding-left: 20px;
+}
 /*coin Flip*/
 
 .coinTitle {
