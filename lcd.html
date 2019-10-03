@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LCD Calculator</title>
+<link rel="stylesheet" type="text/css" href="stylesheet/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a href="index.html" class="blue outline">Back To Home</a>
+  <div id="border1">
+    <h1>Find the Least Common Denominator (LCD)!</h1>
+    <h2>Number 1</h2>
+    <form class="formLCD" onsubmit="return false">
+      <input type="text" name="lcdInput1" id="lcdInput1">
+    <h2>Number 2<h2>
+      <input type="text" name="lcdInput2" id="lcdInput2">
+      <button onclick="getInput()">Calculate</button>
+    </form>
+  </div>
+  <div id="border1">
+    <h1 id="lcdResult">Enter 2 Numbers to Get the Least Common Denominator!</h1>
+  </div>
+  <script src="js/lcd.js" type="text/javascript"></script>
+</body>
+
+</html>

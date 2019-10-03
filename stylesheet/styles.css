@@ -88,6 +88,7 @@ body {
   outline-style: solid;
   outline-color: white;
   outline-width: 10px;
+  animation: bluePhasing 5s infinite;
 }
 .myWebsite {
   display: inline-block;
@@ -167,6 +168,17 @@ body {
   }
   50% {
     opacity: 0;
+  }
+}
+@keyframes bluePhasing {
+  0% {
+    background-color: #00008b;
+  }
+  50 % {
+    background-color: #504EFF;
+  }
+  100% {
+    background-color: #00008b;
   }
 }
 /*repetitive styles*/
